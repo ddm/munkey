@@ -17,7 +17,7 @@ console.log(original.add(1.3, 1.4)); // 2.7
  * Mutated version that floors both arguments before applying the original 'add'
  */
 var floorArgs = µ(original).before("add", function (x, y) {
-  // Return an array which content will be passed as 
+  // Return an array which content will be passed as arguments to the original
   return [Math.floor(x), Math.floor(y)];
 });
 console.log(floorArgs.add(1.3, 1.4)); // 2
