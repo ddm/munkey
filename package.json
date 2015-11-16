@@ -1,0 +1,30 @@
+{
+  "name": "munkey",
+  "version": "0.0.0",
+  "description": "Mini AOP for JavaScript",
+  "author": "Dimitri del Marmol",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ddm/munkey.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ddm/munkey/issues"
+  },
+  "homepage": "https://github.com/ddm/munkey#readme",
+  "keywords": [
+    "aop",
+    "aspect-oriented-programming"
+  ],
+  "dependencies": {
+    "underscore": "1.8.3"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4"
+  }
+}
