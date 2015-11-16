@@ -41,12 +41,15 @@ console.log(subtract.add(1, 1)); // 0
 /**
  * Mutated version for tracing (won't work in strict mode)
  */
- var tracer = µ(original).intercept("add", function interceptor (method, original, args, context) {
-  var result = original.apply(context, args);
-  console.log("'add' was called from", method.caller.name, "with arguments {", args[0], ",", args[1], "} and will return", result);
+ var tracer = µ(original).intercept("add", function interceptor (method, original, args, self) {
+  var result = original.apply(self, args);
+  console.log("'add' was called from", method.caller.name);
+  console.log("arguments: (", args[0], ",", args[1], ")");
   return result;
  });
  (function main () {
-  console.log(tracer.add(1, 2)); // 3
+  console.log(tracer.add(1, 2));  // 'add' was called from main
+                                  // arguments: ( 1 , 2 )
+                                  // 3
  }());
 ```
